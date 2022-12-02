@@ -1,0 +1,53 @@
+% Do all of your package inclusion and configuration here
+
+\usepackage[margin=1.6in]{geometry}
+
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% Here is a theme colour you can use and redefine as you wish
+% Currently, this is configured to be the colour used for
+% - the title
+% - section markers
+% - links
+% - blocks
+\colorlet{themecolour}{RoyalBlue}
+
+\counterwithin{figure}{section}
+
+% Section formatting
+\renewcommand*{\sectionformat}{\color{themecolour}\S\thesection\autodot\enskip}
+\renewcommand*{\subsectionformat}{\color{themecolour}\S\thesubsection\autodot\enskip}
+\renewcommand*{\chapterformat}{\color{themecolour}\S\thechapter\autodot\enskip}
+
+% Theorem-style `amsthm` environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+% Definition-style `amsthm' environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{exercise}{Exercise}[section]
+
+% `tcolorbox` settings
+\tcbuselibrary{skins}
+\usetikzlibrary{shadings}
+
+% Hyperlinks and reference setup
+\usepackage[colorlinks]{hyperref}
+\hypersetup{linkcolor=themecolour}
+\usepackage[capitalize,nameinlink]{cleveref}
+\renewcommand\thefootnote{\textcolor{themecolour}{\arabic{footnote}}}

@@ -1,0 +1,46 @@
+% Set your chapter name here
+\chapter{My first chapter}
+
+Here is some introductory statement.
+
+\section{The Riemann hypothesis}
+
+In this section, we give a long-awaited proof of the Riemann hypothesis.
+
+\subsection{Preliminaries}
+
+\begin{definition}
+    The function $\zeta: \{s \in \bb{C}: \Re(s) > 1\} \to \bb{C}$ such that
+    \[
+        \zeta(s)
+        = \sum_{n = 1}^{\infty} \frac{1}{n^s}
+        = \prod_{p \text{ prime}} \frac{1}{1 - p^{-s}}.
+    \]
+    is called the \emph{Riemann zeta function}.
+\end{definition}
+
+Considering the analytic continuation of $\zeta$, Riemann showed that $\zeta$ satisfied a particular meromorphic functional equation:
+
+\begin{theorem}
+\label{thm_rz_func_eq}
+    For \emph{all} $s \in \bb{C}$, $\zeta$ satisfies
+    \[
+        \zeta(s) = 2^s \pi^{s - 1} \sin\left(\frac{\pi s}{2}\right) \Gamma(1 - s) \zeta(1 - s).
+    \]
+\end{theorem}
+
+\subsection{Zeroes of the Riemann zeta function: the hypothesis}
+
+A consequence of \cref{thm_rz_func_eq} is that every negative, even integer is a zero of $\zeta$. (The same is \emph{not} true of the positive, even integers: why?) Each of these zeroes is called a \emph{trivial zero}. A natural question for one to ask is where, if any, the \emph{nontrivial zeroes} of $\zeta$ lie. Some of these have been found, and curiously they all lay on the strip $\Re(s) = \frac{1}{2}$. This curiosity led Riemann, in 1859, to conjecture that
+
+\begin{block}
+    \begin{conjecture}[Riemann, 1859]
+        All nontrivial zeroes of the Riemann zeta function lie on the strip $Re(s) = \frac{1}{2}$.
+    \end{conjecture}
+\end{block}
+
+We can now prove this conjecture holds, turning it into a theorem:
+
+\begin{proof}
+    Obvious.
+\end{proof}

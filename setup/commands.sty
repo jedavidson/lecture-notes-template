@@ -1,0 +1,12 @@
+% Put any custom commands you want to define here
+
+% For example, you might want to define a shorthand for \mathbb
+\newcommand{\bb}{\mathbb}
+
+% Here's a shaded block
+\tcbset{base/.style={empty, frame engine=path, sharp corners}}
+\newtcolorbox{block}{
+    base,
+    colframe=themecolour!10,
+    borderline west={3pt}{0pt}{themecolour}
+}
